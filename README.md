@@ -2,8 +2,6 @@
 
 ## Examining the Central Limit Theorem in Poisson and Chi-Square Distributions
 
----
-
 ## 1) Poisson distribution with parameter 2
 
 As shown in the graphs below, in the case of 200 repetitions, the histogram is relatively spread out because the number of repetitions is low, and the distribution of the means is not yet fully normal.
