@@ -59,7 +59,7 @@ curve(dnorm(x, mean = mean(means13), sd = sd(means13)),
 
 ---
 
-## Chi-Square Distribution with 10 Degrees of Freedom
+## 2) Chi-Square Distribution with 10 Degrees of Freedom
 
 In the first case, with 200 repetitions, the histogram is relatively uneven, and the number of repetitions is low, so the sample mean has not yet approached normality.
 
