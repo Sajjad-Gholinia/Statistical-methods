@@ -114,6 +114,6 @@ for (i in 1:rep33) {
 hist(means33, col = "lightyellow", main = "Mean , rep = 10000")
 hist(medians33, col = "lightyellow", main = "Median , rep = 10000")
 ```
-![chart2](./Graphs2.jpg)
+![chart2](Graphs2.jpg)
 
 
