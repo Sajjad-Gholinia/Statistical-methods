@@ -55,6 +55,6 @@ hist(means13, col = "skyblue", probability = TRUE,
 curve(dnorm(x, mean = mean(means13), sd = sd(means13)),
       col = "red", lwd = 2, add = TRUE)
 ```
-![output chart1](Graph1.jpg)
+![output chart1](Graph1.JPG)
 
 
