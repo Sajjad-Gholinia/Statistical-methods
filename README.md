@@ -117,3 +117,82 @@ hist(medians33, col = "lightyellow", main = "Median , rep = 10000")
 
 ![chart2](Graph2.jpg)
 
+---
+
+## 3) 95% confidence interval for the sample_data
+
+```R
+CI = function(data) {
+  n_CI = length(data)
+  x_bar = mean(data)
+  sigma = 25
+  z = 1.96  
+  se = sigma / sqrt(n_CI)
+  lower = x_bar - z * se
+  upper = x_bar + z * se
+  return(c(lower, upper))}
+
+sample_data = c(70,78,80,69,81,75,71,83,90,77,88,74,89,67,85)
+CI(sample_data)
+```
+
+```text
+Upper bound: 91.11841
+Lower bound: 65.81492
+```
+
+---
+
+## 4) One-sample t-test
+If the test statistic is greater than the critical value, the null hypothesis is rejected and the mean is less than 52. If the test statistic is smaller, then the null hypothesis is not rejected and the mean is not less than 52.
+Here, the null hypothesis is `rejected` and the mean is less than 52.
+
+```R
+weights4 = c(52, 48, 47, 53, 58, 56, 53, 49, 48, 50)
+n4 = 10
+x_bar4 = mean(weights4)
+s = sd(weights4)
+mu = 52 
+
+(t = (x_bar4 - mu) / (s / sqrt(n4)))
+```
+```text
+test statistic: -0.5187514
+```
+
+```R
+(t_critical = qt(0.05, df = n4 - 1))
+```
+```text
+critical value: -1.833113
+```
+
+---
+
+## 5) Cattle Weight Prediction
+
+The dependent variable is the one we aim to predict or model, and the independent variable is the one that affects the dependent variable or is used to predict it.
+In this example, hand girth (independent variable) can be used to predict the weight of the cattle (dependent variable).
+X: Cattle hand girth
+Y: Cattle weight
+
+```R
+Y = c(641, 633, 651, 666, 688, 680)
+X = c(214, 215, 216, 217, 219, 221)
+
+plot(X,Y,col = "black" , pch =16)
+cor(X,Y)
+```
+
+Since the correlation is close to one, it indicates a strong correlation between the cattle’s weight and heart girth.
+
+```text
+correlation: 0.8978956
+```
+![chart3](Graph3)
+
+
+
+
+
+
