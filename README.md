@@ -195,6 +195,77 @@ correlation: 0.8978956
 ```
 ![chart3](Graph3.jpg)
 
+---
+
+## 5) Efficiency of the two estimators
+
+Performance efficiency of mean and median estimators in a sample of 30 people from exponential distribution.
+
+At 100 repetitions, for the `mean`: the spread is large and the distribution is somewhat wide (the mean fluctuates around 0.3).
+
+At 100 repetitions, for the `median`: the spread is greater than that of the mean. Since the median is skewed in an exponential distribution, it tends to concentrate toward the left.
+
+At 1000 repetitions, for the `mean`: the distribution becomes narrower and more accurate compared to the 100-repetition case.
+
+At 1000 repetitions, for the `median`: the spread is still greater than the mean but better than before.
+
+At 10000 repetitions, for the `mean`: the distribution is almost normal and highly concentrated around the true value, indicating very high efficiency of the mean.
+
+At 10000 repetitions, for the `median`: some spread is still observed, but it performs better than before and approaches its true value (around 0.23).
+
+```R
+n3 = 30
+lambda = 3
+
+par(mfrow = c(2, 3)) 
+
+#-------------------------------------------------------------------------------
+rep31 = 100
+means31 = numeric(rep31)
+medians31 = numeric(rep31)
+
+for (i in 1:rep31) {
+  sample31 = rexp(n3, rate = lambda)
+  means31[i] = mean(sample31)
+  medians31[i] = median(sample31)}
+
+hist(means31, col = "lightblue", main = "Mean , rep = 100")
+hist(medians31, col = "lightblue", main = "Median , rep = 100")
+
+#-------------------------------------------------------------------------------
+rep32 = 1000
+means32 = numeric(rep32)
+medians32 = numeric(rep32)
+
+for (i in 1:rep32) {
+  sample32 = rexp(n3, rate = lambda)
+  means32[i] = mean(sample32)
+  medians32[i] = median(sample32)}
+
+hist(means32, col = "lightgreen", main = "Mean , rep = 1000")
+hist(medians32, col = "lightgreen", main = "Median , rep = 1000")
+
+#-------------------------------------------------------------------------------
+rep33 = 10000
+means33 = numeric(rep33)
+medians33 = numeric(rep33)
+
+for (i in 1:rep33) {
+  sample33 = rexp(n3, rate = lambda)
+  means33[i] = mean(sample33)
+  medians33[i] = median(sample33)}
+
+hist(means33, col = "lightyellow", main = "Mean , rep = 10000")
+hist(medians33, col = "lightyellow", main = "Median , rep = 10000")
+```
+**Conclusion**: The mean is a more efficient estimator in terms of variance, especially when the sample size is large.
+
+![chart4](Graph4.jpg)
+
+
+
+
+
 
 
 
