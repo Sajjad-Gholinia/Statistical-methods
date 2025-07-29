@@ -1,8 +1,8 @@
 # Statistical-methods
 
-## Examining the Central Limit Theorem in Poisson and Chi-Square Distributions
+## 1) Examining the Central Limit Theorem in Poisson and Chi-Square Distributions
 
-## 1) Poisson distribution with parameter 2
+##  1.1) Poisson distribution with parameter 2
 
 As shown in the graphs below, in the case of 200 repetitions, the histogram is relatively spread out because the number of repetitions is low, and the distribution of the means is not yet fully normal.
 
@@ -59,7 +59,7 @@ curve(dnorm(x, mean = mean(means13), sd = sd(means13)),
 
 ---
 
-## 2) Chi-Square Distribution with 10 Degrees of Freedom
+## 1.2) Chi-Square Distribution with 10 Degrees of Freedom
 
 In the first case, with 200 repetitions, the histogram is relatively uneven, and the number of repetitions is low, so the sample mean has not yet approached normality.
 
@@ -119,7 +119,7 @@ hist(medians33, col = "lightyellow", main = "Median , rep = 10000")
 
 ---
 
-## 3) 95% confidence interval for the sample_data
+## 2) 95% confidence interval for the sample_data
 
 ```R
 CI = function(data) {
@@ -143,7 +143,7 @@ Lower bound: 65.81492
 
 ---
 
-## 4) One-sample t-test
+## 3) One-sample t-test
 If the test statistic is greater than the critical value, the null hypothesis is rejected and the mean is less than 52. If the test statistic is smaller, then the null hypothesis is not rejected and the mean is not less than 52.
 Here, the null hypothesis is `rejected` and the mean is less than 52.
 
@@ -169,11 +169,11 @@ critical value: -1.833113
 
 ---
 
-## 5) Cattle Weight Prediction
+## 4) Cattle Weight Prediction
 
-The dependent variable is the one we aim to predict or model, and the independent variable is the one that affects the dependent variable or is used to predict it.
-In this example, hand girth (independent variable) can be used to predict the weight of the cattle (dependent variable).
-X: Cattle hand girth
+The dependent variable is the one we aim to predict or model, and the independent variable is the one that affects the dependent variable or is used to predict it.\n
+In this example, hand girth (independent variable) can be used to predict the weight of the cattle (dependent variable).\n
+X: Cattle hand girth\n
 Y: Cattle weight
 
 ```R
