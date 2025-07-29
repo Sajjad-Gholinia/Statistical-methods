@@ -193,7 +193,7 @@ Since the correlation is close to one, it indicates a strong correlation between
 ```text
 correlation: 0.8978956
 ```
-![chart3](Graph3)
+![chart3](Graph3.jpg)
 
 
 
