@@ -145,6 +145,7 @@ Lower bound: 65.81492
 
 ## 3) One-sample t-test
 If the test statistic is greater than the critical value, the null hypothesis is rejected and the mean is less than 52. If the test statistic is smaller, then the null hypothesis is not rejected and the mean is not less than 52.
+
 Here, the null hypothesis is `rejected` and the mean is less than 52.
 
 ```R
@@ -171,9 +172,12 @@ critical value: -1.833113
 
 ## 4) Cattle Weight Prediction
 
-The dependent variable is the one we aim to predict or model, and the independent variable is the one that affects the dependent variable or is used to predict it.\n
-In this example, hand girth (independent variable) can be used to predict the weight of the cattle (dependent variable).\n
-X: Cattle hand girth\n
+The dependent variable is the one we aim to predict or model, and the independent variable is the one that affects the dependent variable or is used to predict it.
+
+In this example, hand girth (independent variable) can be used to predict the weight of the cattle (dependent variable).
+
+X: Cattle hand girth
+
 Y: Cattle weight
 
 ```R
